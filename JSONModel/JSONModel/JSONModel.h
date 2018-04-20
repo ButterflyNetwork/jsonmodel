@@ -41,16 +41,16 @@ DEPRECATED_ATTRIBUTE
  * Protocol for defining optional properties in a JSON Model class. Use like below to define
  * model properties that are not required to have values in the JSON input:
  *
- * @property (strong, nonatomic) NSString <Optional> *propertyName;
+ * @property (strong, nonatomic) NSString <JSONOptional> *propertyName;
  *
  */
-@protocol Optional
+@protocol JSONOptional
 @end
 
 /**
  * Make all objects compatible to avoid compiler warnings
  */
-@interface NSObject (JSONModelPropertyCompatibility) <Optional, Ignore>
+@interface NSObject (JSONModelPropertyCompatibility) <JSONOptional, Ignore>
 @end
 
 /////////////////////////////////////////////////////////////////////////////////////////////
